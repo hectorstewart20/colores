@@ -1,12 +1,9 @@
 
 public class Color {
-    String[] color;
-
-    public Color(int r, int g, int b) {
-        String r1 = Integer.toString(r, 2);
-        String g1 = Integer.toString(g, 2);
-        String b1 = Integer.toString(b, 2);
-        this.color = new String[]{r1, g1, b1};
+    short[] color;
+    final double weight = 0.5;
+    public Color(short r, short g, short b) {
+        this.color = new short[]{r, g, b};
     }
 
     public String sumaBinarios(String a, String b) {
@@ -18,15 +15,19 @@ public class Color {
         return resultado;
     }
 
-    public String[] Suma(int r, int g, int b) {
-        String r1 = Integer.toString(r, 2);
-        String g1 = Integer.toString(g, 2);
-        String b1 = Integer.toString(b, 2);
+    public short[] Suma(short r, short g, short b) {
 
 
-        color[0] = sumaBinarios(color[0] , r1);
-        color[1] = sumaBinarios(color[1] , g1);
-        color[2] = sumaBinarios(color[2] , b1);
+        int variable  = (int)(weight * color[0]  + (1 - weight) * r);
+
+        System.out.println("la variable es: "+variable);
+
+
+        color[0] = (short) (color[0] & r);
+        color[1] = (short) (color[1] & g);
+        color[2] = (short) (color[2] & b);
+        /*color[1] = sumaBinarios(color[1] , g1);
+        color[2] = sumaBinarios(color[2] , b1);*/
 
         return color;
     }
@@ -40,9 +41,7 @@ public class Color {
     }
 
     String[] restaColor(int r, int g, int b){
-      color[0] = Math.round(Math.abs((color[0] - r)/2));
-        color[1] = Math.round(Math.abs((color[1] - r)/2));
-        color[2] = Math.round(Math.abs((color[2] - r)/2));
+
         return color;
     }*/
 }

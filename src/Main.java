@@ -32,6 +32,8 @@ class Main {
             System.out.println(Arrays.toString(nuevo_c));
             System.out.println(Arrays.toString(nuevo_c));
 
+                        System.out.println("coloque otra linea a proposito");
+
 
 
     }

@@ -29,9 +29,9 @@ class Main {
             short g2 = dato1.nextShort();
             short b2 = dato1.nextShort();
             short[] nuevo_c = c.Suma(r2, g2, b2);
-
-
             System.out.println(Arrays.toString(nuevo_c));
+            System.out.println(Arrays.toString(nuevo_c));
+
 
 
     }
